@@ -1,6 +1,6 @@
 variable "user_name" {
   type    = list(string)
-  default = ["username1", "username2", "username3"]
+  default = ["TFuser1", "TFuser2", "tfuser3"]
 }
 
 variable "instance_count" {
