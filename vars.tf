@@ -24,7 +24,3 @@ variable "policy_arn" {
 variable "policy_attachment" {
   default = "administrators_attach"
 }
-
-variable "region" {
-    default = "us-west-2"
-}
