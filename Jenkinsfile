@@ -6,16 +6,27 @@ pipeline{
 
   }
    stages{
-       stage('terraform init and plan'){
+       stage('TF init and validate'){
            steps{
                sh "terraform init"
-               sh "terraform plan"
-               sh " terraform apply -auto-approve"
-               sh " terraform destroy -auto-approve"
-
+               sh "terraform validate"
+               
            }
        }
+        stage('TF plan'){
+            steps{
+                sh "terraform plan"
+      }
        
-   }
+    }
+    stage('Tf apply Aproval'){
+    input "terraform apply?"
+    }
+     steps {
+                sh "terraform plan "
+
+              }
+
 
 }
+      
