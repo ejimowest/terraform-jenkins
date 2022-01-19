@@ -19,15 +19,13 @@ pipeline{
       }
        
     }
-    stage('Tf apply Aproval'){
-    input "terraform apply?"
-    }
-     steps {
+        stage('Tf apply Aproval'){
+            input "terraform apply?"
+             steps {
                 sh " terraform apply -auto-approve"
 
               }
-
-
+    }
   }
 }
       
