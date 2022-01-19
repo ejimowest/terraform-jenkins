@@ -23,7 +23,7 @@ pipeline{
     input "terraform apply?"
     }
      steps {
-                sh "terraform plan "
+                sh " terraform apply -auto-approve"
 
               }
 
