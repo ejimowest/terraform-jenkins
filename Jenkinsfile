@@ -30,6 +30,16 @@ pipeline{
 
               }
     }
+         stage('Tf Delete Aproval'){
+             steps { 
+                 script {
+                      def userInput = input(id: 'confirm', message: 'Terraform destroy?', parameters: [ [$class: 'BooleanParameterDefinition', defaultValue: false, description: 'Terraform destroy', name: 'confirm'] ])
+
+                 }
+         
+                sh " terraform destroy -auto-approve"
+
+              }
   }
 }
       
