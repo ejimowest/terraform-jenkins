@@ -3,9 +3,9 @@ output "aws_iam_user" {
 }
 
 output "aws_iam_group_membership" {
-    value = aws_iam_group_membership.administrators_users
+    value = aws_iam_group_membership.TFadministrators_users
 }
 
-output "aws_iam_policy_attachment" {
-    value = aws_iam_policy_attachment.administrators-attach
-}
+#output "aws_iam_policy_attachment" {
+   # value = aws_iam_policy_attachment.TFadministrators-attach
+#}
