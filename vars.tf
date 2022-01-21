@@ -1,6 +1,6 @@
 variable "user_name" {
   type    = list(string)
-  default = ["TFuser1", "TFuser2", "tfuser3"]
+  default = ["TFuser1", "TFuser2", "TFuser3"]
 }
 
 variable "instance_count" {
@@ -9,11 +9,11 @@ variable "instance_count" {
 
 variable "group_names" {
    type = string
-  default = "administrators"
+  default = "TFadministrators"
 }
 
 variable "group_membership_names" {
-  default = "administrators_users"
+  default = "TFadministrators_users"
 }
 
 variable "policy_arn" {
@@ -22,7 +22,7 @@ variable "policy_arn" {
 
 
 variable "policy_attachment" {
-  default = "administrators_attach"
+  default = "TFadministrators_attach"
 }
 
 variable "region" {

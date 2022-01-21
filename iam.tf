@@ -29,7 +29,7 @@ resource "aws_iam_user" "demo" {
 # add users to a group :)
 
 
-resource "aws_iam_group_membership" "administrators_users" {
+resource "aws_iam_group_membership" "TFadministrators_users" {
   name       = var.group_membership_names
   users      = var.user_name
 
